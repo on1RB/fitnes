@@ -2222,6 +2222,7 @@ video {
   padding: 52px 20px;
   padding-bottom: 20px;
   background: rgba(16, 38, 84, 0.89);
+  overflow-y: overlay;
 }
 
 .trainers__card--hover:hover h4 {
@@ -2251,7 +2252,6 @@ video {
   height: 100%;
   top: 0;
   left: 0;
-  overflow: scroll;
   z-index: 2;
 }
 
