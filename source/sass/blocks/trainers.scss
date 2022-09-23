@@ -1,0 +1,294 @@
+.trainers {
+  margin-bottom: 120px;
+
+  @include vp-1199 {
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 70px;
+  }
+}
+
+.trainers__inner {
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.trainers h3 {
+  font-family: $ff-bebas-neue;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: $sapphire;
+  margin: 0;
+  padding-left: 2px;
+  margin-bottom: 52px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 41px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 43px;
+  }
+}
+
+.trainers__slider {
+  max-width: 1310px;
+  padding: 0 75px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &--nojs {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-1199 {
+    padding: 0 56px;
+  }
+
+  @include vp-767 {
+    padding: 0 32px;
+  }
+}
+
+.trainers__swiper {
+  &--nojs {
+    margin: 0;
+  }
+}
+
+.trainers__content {
+  &--nojs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    @include vp-1199 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.trainers__image {
+  width: 100%;
+  height: 100%;
+
+  @include vp-1199 {
+    margin-bottom: -9px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
+}
+
+.trainers__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #c1c7d2;
+}
+
+.trainers__card {
+  position: relative;
+
+  &--hover {
+    &:hover {
+      box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+    }
+  }
+}
+
+.trainers__card--hover:hover .trainers__info {
+  padding: 52px 20px;
+  padding-bottom: 20px;
+  background: rgba(16, 38, 84, 0.89);
+
+  @include vp-767 {
+    padding-top: 42px;
+  }
+}
+
+.trainers__card--hover:hover h4 {
+  position: relative;
+  bottom: 0;
+
+  @include vp-1199 {
+    padding-left: 3.8%;
+  }
+
+  @include vp-767 {
+    padding-left: 7%;
+  }
+}
+
+.trainers__card--hover:hover p {
+  display: block;
+
+  @include vp-1199 {
+    padding-right: 3%;
+  }
+
+  @include vp-767 {
+    padding-right: 0;
+  }
+}
+
+.trainers__card--hover:hover ul {
+  display: grid;
+}
+
+.trainers__info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  z-index: 2;
+}
+
+.trainers__info h4 {
+  position: absolute;
+  text-align: center;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  width: 100%;
+  bottom: 22px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  margin: 0;
+  color: $color-default-white;
+  z-index: 1;
+
+  @include vp-1199 {
+    padding-left: 10.3%;
+  }
+}
+
+.trainers__info p {
+  display: none;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  color: #b6bdcc;
+  margin-top: -4px;
+  margin-bottom: 33px;
+}
+
+.trainers__info ul {
+  display: none;
+  row-gap: 13px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 51px;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-default-white;
+
+  @include vp-767 {
+    padding-left: 30px;
+  }
+}
+
+.trainers__info li {
+  position: relative;
+}
+
+.trainers__info li::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $color-default-white;
+  left: -16px;
+  top: 7px;
+}
+
+.trainers__button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  width: 25px;
+  height: 34px;
+  top: 50%;
+  margin-top: -17px;
+  padding: 0;
+  background-image: url("../img/svg/arrow-slider.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.8s ease-in-out;
+
+  @include vp-767 {
+    width: 11px;
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  &--prev {
+    left: 18px;
+    z-index: 100;
+
+    @include vp-1199 {
+      left: -1px;
+    }
+
+    &:hover {
+      transform: rotate(-360deg);
+    }
+  }
+
+  &--next {
+    right: 18px;
+    z-index: 100;
+    transform: rotate(180deg);
+
+    @include vp-1199 {
+      right: -1px;
+    }
+
+    &:hover {
+      transform: rotate(540deg);
+    }
+  }
+}

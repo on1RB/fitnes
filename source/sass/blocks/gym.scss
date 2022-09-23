@@ -1,0 +1,264 @@
+.gym {
+  position: relative;
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    padding-bottom: 70px;
+  }
+}
+
+.gym__wrapper {
+  max-width: 1200px;
+  padding: 120px 50px;
+  padding-right: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 115px;
+
+  @include vp-1199 {
+    padding: 100px 45px;
+    padding-top: 99px;
+    flex-direction: column;
+    margin-bottom: 83px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    padding-top: 69px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.gym__text {
+  max-width: 385px;
+  padding-top: 49px;
+  margin-right: 85px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  color: $sapphire;
+
+  @include vp-1199 {
+    min-width: 502px;
+    max-width: fit-content;
+    text-align: center;
+    padding: 0;
+    padding-left: 88px;
+    padding-right: 88px;
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    min-width: fit-content;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+.gym__text h3 {
+  font-family: $ff-bebas-neue;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 6px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 9px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 6px;
+  }
+}
+
+.gym__text b {
+  display: block;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  margin-bottom: 39px;
+
+  @include vp-1199 {
+    margin-bottom: 34px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 24px;
+  }
+}
+
+.gym__text p,
+.gym__text span {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.gym__text p {
+  @include vp-767 {
+    padding-right: 30px;
+  }
+}
+
+.gym__text span {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.gym__picture img {
+  object-fit: cover;
+  height: 401px;
+  background-color: #dddde8;
+
+  @include vp-1199 {
+    width: 100%;
+    height: auto;
+  }
+
+  @include vp-767 {
+    min-height: 313px;
+    margin-bottom: 40px;
+  }
+}
+
+.gym__video-block {
+  position: absolute;
+  width: 364px;
+  height: 228px;
+  left: 50%;
+  bottom: 5px;
+  margin-left: -143px;
+  z-index: 10;
+
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+    bottom: 17px;
+    margin-left: -133px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 167px;
+    margin: 0;
+  }
+}
+
+.gym__button {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  border: none;
+  padding: 0;
+  background-image: url("../img/svg/play-button.svg");
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+    margin-left: -37px;
+    margin-top: -37px;
+    background-image: url("../img/svg/play-button-tablet.svg");
+  }
+
+  @include vp-767 {
+    margin-left: -35px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  &:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 5px $color-default-white;
+  }
+}
+
+.gym__button:hover .gym__button-arrow {
+  fill: $sapphire;
+}
+
+.gym__button-arrow {
+  fill: $color-default-white;
+  padding-left: 4px;
+  padding-top: 4px;
+
+  @include vp-1199 {
+    width: 14px;
+    height: 15px;
+    padding-left: 1px;
+    padding-top: 5px;
+  }
+}
+
+.gym__video-player {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--nojs {
+    display: block;
+  }
+}
+
+.gym__video-player iframe {
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.gym__video-overlay {
+  background-color: #8295ba;
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}
