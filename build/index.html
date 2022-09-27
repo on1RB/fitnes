@@ -22,17 +22,21 @@
                 <use xlink:href="img/sprite_auto.svg#supergym-logo"></use>
               </svg>
             </a>
-            <a href="tel:88005555555" class="page-header__phone">8-800-555-55-55</a>
+            <div class="page-header__block">
+              <a href="tel:88005555555" class="page-header__phone">8-800-555-55-55</a>
+            </div>
           </div>
           <div class="page-header__inner">
             <div class="page-header__title">
               <p>Омск</p>
-              <h2>Фитнес центр</h2>
-              <ul>
-                <li>Тренажёрный зал</li>
-                <li>Групповые занятия</li>
-                <li>Кардио-зона</li>
-              </ul>
+              <div class="page-header__info">
+                <h2>Фитнес центр</h2>
+                <ul>
+                  <li>Тренажёрный зал</li>
+                  <li>Групповые занятия</li>
+                  <li>Кардио-зона</li>
+                </ul>
+              </div>
               <a href="#subscribe" class="page-header__button">Купить абонемент</a>
             </div>
             <div class="page-header__picture">
@@ -308,7 +312,7 @@
           <div class="trainers__slider trainers__slider--nojs">
             <div class="swiper trainers__swiper trainers__swiper--nojs">
               <div class="trainers__content trainers__content--nojs swiper-wrapper">
-                <div class="trainers__card trainers__card--hover swiper-slide">
+                <div class="trainers__card trainers__card--hover swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp" srcset="img/content/anna-pavlova.webp 1x, img/content/anna-pavlova@2x.webp 2x">
@@ -326,7 +330,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="trainers__card trainers__card--hover swiper-slide">
+                <div class="trainers__card trainers__card--hover swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp" srcset="img/content/alexey-lavrov.webp 1x, img/content/alexey-lavrov@2x.webp 2x">
@@ -344,7 +348,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="trainers__card trainers__card--hover swiper-slide">
+                <div class="trainers__card trainers__card--hover swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/content/alexsander-pashkov-mobile.webp 1x, img/content/alexsander-pashkov-mobile@2x.webp 2x">
@@ -364,7 +368,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="trainers__card trainers__card--hover swiper-slide">
+                <div class="trainers__card trainers__card--hover swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/maria-ketova-tablet.webp 1x, img/content/maria-ketova-tablet@2x.webp 2x">
@@ -603,9 +607,9 @@
               <h3>Бесплатное занятие</h3>
               <form action="https://echo.htmlacademy.ru/" method="get">
                 <label class="visually-hidden" for="name">Введите ваше имя.</label>
-                <input type="text" id="name" name="name" placeholder="Имя" pattern="^[a-zA-Z]+$" required minlength="1">
+                <input type="text" id="name" name="name" placeholder="Имя" required minlength="1">
                 <label class="visually-hidden" for="phone">Введите ваш номер телефона.</label>
-                <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="^\+7\(\d{3}\)\d{7}$" maxlength="14" required>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{1,100}" placeholder="Телефон" required>
                 <button type="submit">отправить</button>
               </form>
             </div>

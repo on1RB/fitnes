@@ -1251,8 +1251,8 @@ video {
 .rouble {
   font-family: "Rouble", "Arial", sans-serif;
   /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
+  text-transform: lowercase;
+  font-weight: 400;
   /* stylelint-enable */
 }
 
@@ -1290,9 +1290,9 @@ video {
 
 .no-transition {
   /* stylelint-disable-next-line */
-  -webkit-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
 .container {
@@ -1334,6 +1334,16 @@ video {
 
 .page-header__logo-icon {
   fill: #ffffff;
+}
+
+.page-header__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .page-header__phone {
@@ -1381,6 +1391,10 @@ video {
   letter-spacing: 0.03em;
   margin: 0;
   margin-bottom: 8px;
+}
+
+.page-header__info {
+  display: block;
 }
 
 .page-header__title h2 {
@@ -1541,7 +1555,7 @@ video {
   width: 364px;
   height: 228px;
   left: 50%;
-  bottom: 5px;
+  top: 408px;
   margin-left: -143px;
   z-index: 10;
 }
@@ -1738,7 +1752,7 @@ video {
 
 .subscribe__item:hover,
 .subscribe__item:focus-within {
-  border: 7px solid transparent;
+  border: 7px solid;
   -o-border-image: -o-linear-gradient(301.18deg, #d10a42 0.85%, #00359f 100%);
   border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
   border-image-slice: 1;
@@ -2104,23 +2118,31 @@ video {
   box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
 }
 
-.trainers__card--hover:hover .trainers__info {
+.trainers__card--hover:hover .trainers__info,
+.trainers__card--hover:active .trainers__info,
+.trainers__card--hover:focus .trainers__info {
   padding: 52px 20px;
   padding-bottom: 20px;
   background: rgba(16, 38, 84, 0.89);
   overflow-y: overlay;
 }
 
-.trainers__card--hover:hover h4 {
+.trainers__card--hover:hover h4,
+.trainers__card--hover:active h4,
+.trainers__card--hover:focus h4 {
   position: relative;
   bottom: 0;
 }
 
-.trainers__card--hover:hover p {
+.trainers__card--hover:hover p,
+.trainers__card--hover:active p,
+.trainers__card--hover:focus p {
   display: block;
 }
 
-.trainers__card--hover:hover ul {
+.trainers__card--hover:hover ul,
+.trainers__card--hover:active ul,
+.trainers__card--hover:focus ul {
   display: -ms-grid;
   display: grid;
 }
@@ -2540,7 +2562,7 @@ video {
   padding-left: 28px;
   padding-right: 28px;
   padding-bottom: 18px;
-  border: 7px solid transparent;
+  border: 7px solid;
   -o-border-image: -o-linear-gradient(left top, #d10a42, #00359f);
   border-image: -webkit-gradient(linear, left top, right bottom, from(#d10a42), to(#00359f));
   border-image: linear-gradient(to right bottom, #d10a42, #00359f);
@@ -2610,6 +2632,10 @@ video {
   width: 100%;
 }
 
+.reviews__content {
+  max-height: 242px;
+}
+
 .reviews__content--nojs {
   display: -ms-grid;
   display: grid;
@@ -2620,6 +2646,7 @@ video {
 
 .reviews__card {
   width: 560px;
+  max-height: 242px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
@@ -2632,6 +2659,7 @@ video {
   background: #1c3374;
   -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  overflow-y: overlay;
 }
 
 .reviews__avatar {
@@ -3150,6 +3178,7 @@ video {
   .gym__video-block {
     width: 266px;
     height: 167px;
+    top: auto;
     bottom: 17px;
     margin-left: -133px;
   }
@@ -3340,11 +3369,15 @@ video {
     margin-bottom: -9px;
   }
 
-  .trainers__card--hover:hover h4 {
+  .trainers__card--hover:hover h4,
+  .trainers__card--hover:active h4,
+  .trainers__card--hover:focus h4 {
     padding-left: 3.8%;
   }
 
-  .trainers__card--hover:hover p {
+  .trainers__card--hover:hover p,
+  .trainers__card--hover:active p,
+  .trainers__card--hover:focus p {
     padding-right: 3%;
   }
 
@@ -3647,7 +3680,9 @@ video {
 
   .page-header__title {
     min-width: 290px;
-    max-width: 380px;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
     padding-top: 0;
     margin-right: 0;
   }
@@ -3658,15 +3693,35 @@ video {
     margin-bottom: 9px;
   }
 
+  .page-header__info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 42px;
+  }
+
   .page-header__title h2 {
     font-size: 78px;
     line-height: 78px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
   }
 
   .page-header__title ul {
-    margin-top: -75px;
-    margin-left: -1px;
-    margin-bottom: 54px;
+    margin: 0;
+    margin-top: 82px;
+    margin-right: -36px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
   }
 
   .page-header__button {
@@ -3866,15 +3921,21 @@ video {
     margin-bottom: 0;
   }
 
-  .trainers__card--hover:hover .trainers__info {
+  .trainers__card--hover:hover .trainers__info,
+  .trainers__card--hover:active .trainers__info,
+  .trainers__card--hover:focus .trainers__info {
     padding-top: 42px;
   }
 
-  .trainers__card--hover:hover h4 {
+  .trainers__card--hover:hover h4,
+  .trainers__card--hover:active h4,
+  .trainers__card--hover:focus h4 {
     padding-left: 7%;
   }
 
-  .trainers__card--hover:hover p {
+  .trainers__card--hover:hover p,
+  .trainers__card--hover:active p,
+  .trainers__card--hover:focus p {
     padding-right: 0;
   }
 

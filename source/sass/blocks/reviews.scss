@@ -63,6 +63,10 @@
   }
 }
 
+.reviews__content {
+  max-height: 242px;
+}
+
 .reviews__content--nojs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -75,6 +79,7 @@
 
 .reviews__card {
   width: 560px;
+  max-height: 242px;
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 28px;
@@ -82,6 +87,7 @@
   margin: 0 auto;
   background: #1c3374;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  overflow-y: overlay;
 
   @include vp-1199 {
     padding-left: 65px;

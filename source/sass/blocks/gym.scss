@@ -140,13 +140,14 @@
   width: 364px;
   height: 228px;
   left: 50%;
-  bottom: 5px;
+  top: 408px;
   margin-left: -143px;
   z-index: 10;
 
   @include vp-1199 {
     width: 266px;
     height: 167px;
+    top: auto;
     bottom: 17px;
     margin-left: -133px;
   }

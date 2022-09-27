@@ -130,7 +130,9 @@
   }
 }
 
-.trainers__card--hover:hover .trainers__info {
+.trainers__card--hover:hover .trainers__info,
+.trainers__card--hover:active .trainers__info,
+.trainers__card--hover:focus .trainers__info {
   padding: 52px 20px;
   padding-bottom: 20px;
   background: rgba(16, 38, 84, 0.89);
@@ -141,7 +143,9 @@
   }
 }
 
-.trainers__card--hover:hover h4 {
+.trainers__card--hover:hover h4,
+.trainers__card--hover:active h4,
+.trainers__card--hover:focus h4 {
   position: relative;
   bottom: 0;
 
@@ -154,7 +158,9 @@
   }
 }
 
-.trainers__card--hover:hover p {
+.trainers__card--hover:hover p,
+.trainers__card--hover:active p,
+.trainers__card--hover:focus p {
   display: block;
 
   @include vp-1199 {
@@ -166,7 +172,9 @@
   }
 }
 
-.trainers__card--hover:hover ul {
+.trainers__card--hover:hover ul,
+.trainers__card--hover:active ul,
+.trainers__card--hover:focus ul {
   display: grid;
 }
 
