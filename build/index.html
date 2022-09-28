@@ -609,7 +609,7 @@
                 <label class="visually-hidden" for="name">Введите ваше имя.</label>
                 <input type="text" id="name" name="name" placeholder="Имя" required minlength="1">
                 <label class="visually-hidden" for="phone">Введите ваш номер телефона.</label>
-                <input type="tel" name="phone" id="phone" pattern="[0-9]{1,100}" placeholder="Телефон" required>
+                <input type="tel" name="phone" id="phone" pattern="\+?[0-9\s\-\(\)]+" placeholder="Телефон" required>
                 <button type="submit">отправить</button>
               </form>
             </div>
